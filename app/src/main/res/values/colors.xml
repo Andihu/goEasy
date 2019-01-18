@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#fbe33f</color>
+    <color name="colorPrimaryDark">#ffffff</color>
+    <color name="colorAccent">#fbe33f</color>
+
+    <color name="white">#ffffff</color>
+    <color name="press">#aeededed</color>
+    <color name="text_color">#737373</color>
+    <color name="text_child_color">#9b9b9b</color>
+    <color name="viewfinder_mask">#60000000</color>
+    <color name="price_color">#bb5a2c</color>
+    <color name="main_text_color">#000000</color>
+</resources>

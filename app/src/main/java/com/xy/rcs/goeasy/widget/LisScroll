@@ -1,0 +1,50 @@
+package com.xy.rcs.goeasy.widget;
+
+import android.content.Context;
+import android.util.AttributeSet;
+import android.widget.ScrollView;
+
+/**
+ * <p>文件描述：<p>
+ * <p>作者：hujian<p>
+ * <p>创建时间：2018/12/19/019<p>
+ * <p>更改时间：2018/12/19/019<p>
+ * <p>版本号：1<p>
+ */
+public class ListenerScrollView extends ScrollView {
+
+
+    public interface ScrollViewListener{
+        void onScrollChanged(ListenerScrollView scrollView, int x,int y,
+                             int oldx, int oldy);
+    }
+
+    private ScrollViewListener scrollViewListener= null;
+
+    public ListenerScrollView(Context context) {
+        super(context);
+    }
+
+    public ListenerScrollView(Context context, AttributeSet attrs) {
+        super(context, attrs);
+    }
+
+    public ListenerScrollView(Context context, AttributeSet attrs, int defStyleAttr) {
+        super(context, attrs, defStyleAttr);
+    }
+
+    public ListenerScrollView(Context context, AttributeSet attrs, int defStyleAttr, int
+            defStyleRes) {
+        super(context, attrs, defStyleAttr, defStyleRes);
+    }
+    public void setScrollViewListener(ScrollViewListener scrollViewListener){
+        this.scrollViewListener = scrollViewListener;
+    }
+    @Override
+    protected void onScrollChanged(int x, int y, int oldx, int oldy){
+        super.onScrollChanged(x,y,oldx,oldy);
+        if(scrollViewListener!=null){
+            scrollViewListener.onScrollChanged(this,x,y,oldx,oldy);
+        }
+    }
+}

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:background="@drawable/recycler_item_b"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_marginTop="20dp"
+            android:id="@+id/home_list_cart_img"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20dp"
+            android:src="@drawable/scann_bg" />
+
+        <LinearLayout
+            android:id="@+id/item__a"
+            android:orientation="vertical"
+            android:layout_toRightOf="@+id/home_list_cart_img"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/home_list_cart_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="iphone6s"
+                android:textColor="@color/main_text_color"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/home_list_cart_size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="6s" />
+
+            <TextView
+                android:id="@+id/home_list_cart_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="25￥"
+                android:textColor="@color/price_color"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_alignTop="@+id/home_list_cart_discount"
+            android:layout_toLeftOf="@+id/home_list_cart_discount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="折扣："/>
+
+        <TextView
+            android:id="@+id/home_list_cart_discount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="30dp"
+            android:layout_below="@+id/item__a"
+            android:text="@string/app_name"
+            android:textColor="@color/price_color"
+            android:textStyle="bold" />
+
+
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/press"
+    android:layout_height="90dp">
+    <View
+        android:id="@+id/tempid4"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/split_line_color"/>
+
+    <TextView
+        android:id="@+id/position_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20sp"
+        android:layout_alignParentLeft="true"
+        android:layout_above="@+id/position_phone"
+        android:text="胡健"/>
+    <TextView
+        android:id="@+id/position_phone"
+        android:layout_width="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="20dp"
+        android:layout_centerVertical="true"
+        android:layout_height="wrap_content"
+        android:text="13121375238"/>
+    <TextView
+        android:id="@+id/item_position_positon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_below="@+id/position_phone"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="20dp"
+        android:text="北京市 北京市 朝阳区 "/>
+    <ImageView
+        android:clickable="true"
+        android:id="@+id/item_position_setting"
+        android:layout_width="26dp"
+        android:layout_height="26dp"
+        android:src="@drawable/ic_change"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="20dp"/>
+    <ImageView
+        android:id="@+id/position_delete"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:src="@drawable/ic_deletc_position"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="26dp"
+        android:layout_toLeftOf="@+id/item_position_setting"/>
+
+</RelativeLayout>

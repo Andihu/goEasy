@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.MySpaceFragment">
+
+
+    <RelativeLayout
+        android:id="@+id/bg"
+        android:layout_width="match_parent"
+        android:layout_height="340dp"
+        android:background="@drawable/public_bg">
+
+        <ImageView
+            android:id="@+id/myspace_back"
+            android:layout_width="23dp"
+            android:layout_height="23dp"
+            android:layout_marginStart="20sp"
+            android:layout_marginTop="40dp"
+            android:src="@drawable/ic_back" />
+        <ImageView
+            android:id="@+id/setting"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/ic_setting"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@id/myspace_back"
+            android:layout_marginEnd="40dp"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="90dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/myspace_icon"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:background="@drawable/icon_bg" />
+
+            <TextView
+                android:id="@+id/myspace_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/myspace_icon"
+                android:layout_marginTop="12dp"
+                android:text="Jonny Lulu"
+                android:textColor="#ffffff"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/myspace_area"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="China"
+                android:textColor="#ffffff" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="20dp"
+            android:layout_marginEnd="20dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/myspace_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="200"
+                android:textColor="#ffffff"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="积分"
+                android:textColor="#ffffff"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/item_order"
+        android:layout_width="match_parent"
+        android:clickable="true"
+        android:layout_height="80dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/bg"
+        android:background="@drawable/item_bg">
+
+        <ImageView
+            android:id="@+id/icon4"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="30dp"
+            android:src="@drawable/ic_order" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20dp"
+            android:layout_toRightOf="@+id/icon4"
+            android:text="订单中心"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:layout_width="23dp"
+            android:layout_height="23dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="20dp"
+            android:src="@drawable/ic_go" />
+
+        <View
+            android:layout_width="330dp"
+            android:layout_height="1px"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:background="#929292" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/item_position"
+        android:clickable="true"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_below="@+id/item_order"
+        android:background="@drawable/item_bg">
+
+        <ImageView
+            android:id="@+id/icon2"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="30dp"
+            android:src="@drawable/ic_position" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20dp"
+            android:layout_toRightOf="@+id/icon2"
+            android:text="地址设置"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:layout_width="23dp"
+            android:layout_height="23dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="20dp"
+            android:src="@drawable/ic_go" />
+
+        <View
+            android:layout_width="330dp"
+            android:layout_height="1px"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:background="#929292" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/item_like"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:clickable="true"
+        android:layout_below="@+id/item_position"
+        android:background="@drawable/item_bg">
+
+        <ImageView
+            android:id="@+id/icon3"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="30dp"
+            android:src="@drawable/ic_like" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20dp"
+            android:layout_toRightOf="@+id/icon3"
+            android:text="我的收藏"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:layout_width="23dp"
+            android:layout_height="23dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="20dp"
+            android:src="@drawable/ic_go" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/quitlanding"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp"
+        android:text="退出登陆" />
+
+
+</RelativeLayout>

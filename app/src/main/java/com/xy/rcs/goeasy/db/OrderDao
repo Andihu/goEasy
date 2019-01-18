@@ -1,0 +1,125 @@
+package com.xy.rcs.goeasy.db;
+
+import android.content.ContentValues;
+import android.content.Context;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteOpenHelper;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+ * <p>文件描述：<p>
+ * <p>作者：hujian<p>
+ * <p>创建时间：2018/12/21/021<p>
+ * <p>更改时间：2018/12/21/021<p>
+ * <p>版本号：1<p>
+ */
+public class OrderDao implements OrderDataBase {
+    public static final String LIKE_ORDER_DB = "like_order.db";
+    public static final String ID = "_id";
+    public static final String NAME = "name";
+    public static final String POSITION = "position";
+    public static final String ICON = "icon";
+    public static final String IMGICON = "img" + ICON;
+    public static final String INFO = "info";
+    public static final String PRICES = "prices";
+    public static final String MODEL = "model";
+    public static final String ALL_ORDER = "all_order";
+    public static final String CREATE_AT = "createAt";
+    public static final String SUB_ID = "sub_id";
+    public static final String SUB_ORDER = "sub_order";
+
+
+    public static final String CREAT_MAIN_TABLE = "create table " + ALL_ORDER + "("+
+            ID + " Integer primary key autoincrement," +
+            CREATE_AT + " text )";
+
+    public static final String CREATE_SUB_TABLE = "create table " + SUB_ORDER + "(" +
+            ID + " Integer primary key autoincrement," +
+            NAME + " text ," +
+            POSITION + " text," +
+            IMGICON + " text," +
+            ICON + " text," +
+            INFO + " text," +
+            PRICES + " text," +
+            MODEL + " text," +
+            SUB_ID + " Integer)";
+
+
+    SQLiteDatabase db;
+
+
+
+
+    public OrderDao(Context context) {
+        SQLiteOpenHelper helper = new SQLiteOpenHelper(context, LIKE_ORDER_DB, null, 1) {
+            @Override
+            public void onCreate(SQLiteDatabase db) {
+                db.execSQL(CREAT_MAIN_TABLE);
+                db.execSQL(CREATE_SUB_TABLE);
+            }
+            @Override
+            public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+            }
+        };
+        db = helper.getWritableDatabase();
+    }
+
+    public List<JSONObject> queryMain2json(){
+        List<JSONObject> jsonObjectLists = new ArrayList<>();
+        Cursor c=db.query(ALL_ORDER,null,null,null,null,null,null,null);
+        c.moveToFirst();
+        JSONObject jsonObject;
+        while (c.moveToNext()) {
+            jsonObject = new JSONObject();
+            try {
+                jsonObject.put(ID, c.getInt(c.getColumnIndex(ID)));
+                jsonObject.put(CREATE_AT, c.getString(c.getColumnIndex(CREATE_AT)));
+
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+            jsonObjectLists.add(jsonObject);
+
+        }
+        return jsonObjectLists;
+    }
+
+    @Override
+    public void insertMain(String createAt) {
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(CREATE_AT, createAt);
+        db.insert(ALL_ORDER, null, contentValues);
+    }
+
+    @Override
+    public Cursor queryMainAll() {
+        return db.rawQuery("select * from all_order",null,null);
+    }
+
+    @Override
+    public void insertSub(String sub_id, String name, String model, String prices, String
+            icon, String imgicon, String position, String info) {
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(NAME, name);
+        contentValues.put(POSITION, position);
+        contentValues.put(IMGICON, imgicon);
+        contentValues.put(ICON, icon);
+        contentValues.put(INFO, info);
+        contentValues.put(MODEL, model);
+        contentValues.put(PRICES, prices);
+        contentValues.put(SUB_ID,sub_id);
+        db.insert("sub_order", null, contentValues);
+    }
+
+    @Override
+    public Cursor querySubAllbyID(String id) {
+
+        return db.rawQuery("select * from sub_order where sub_id=?",new String[]{id},null);
+    }
+}

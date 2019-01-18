@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:background="#ffffff">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_alignParentRight="true"
+        android:layout_alignLeft="@+id/like_cart_price"
+        android:background="@color/split_line_color"/>
+
+    <CheckBox
+        android:id="@+id/like_checkbox"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="10dp"
+        android:background="@drawable/checkbox_bg"
+        android:button="@null"
+        android:checked="false"
+        android:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/like_cart_img"
+        android:layout_width="52dp"
+        android:layout_height="52dp"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="10dp"
+        android:layout_toEndOf="@+id/like_checkbox"
+        android:src="@drawable/scann_bg" />
+
+    <TextView
+        android:id="@+id/like_cart_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/like_cart_size"
+        android:layout_marginStart="10dp"
+        android:layout_toRightOf="@+id/like_cart_img"
+        android:text="iphone6s"
+        android:textColor="@color/main_text_color"
+        android:textSize="8sp" />
+
+    <TextView
+        android:id="@+id/like_cart_size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/like_cart_name"
+        android:layout_centerVertical="true"
+        android:text="6s" />
+
+    <TextView
+        android:id="@+id/like_cart_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/like_cart_name"
+        android:layout_below="@+id/like_cart_size"
+        android:layout_centerVertical="true"
+        android:text="25￥"
+        android:textColor="@color/price_color"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/like_delete"
+        android:layout_width="60dp"
+        android:layout_height="30dp"
+        android:clickable="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/text_bg_select"
+        android:gravity="center"
+        android:text="删除" />
+
+
+</RelativeLayout>

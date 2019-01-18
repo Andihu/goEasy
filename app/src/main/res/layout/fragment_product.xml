@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fbfffa"
+    tools:context=".fragment.ProductFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <ListView
+            android:id="@+id/product_framgment_mian_listview"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="7"
+            android:overScrollMode="never"
+            android:scrollbars="none" />
+
+        <GridView
+            android:id="@+id/product_framgment_child_listview"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:overScrollMode="never"
+            android:numColumns="2"
+            android:scrollbars="none" />
+    </LinearLayout>
+
+</FrameLayout>

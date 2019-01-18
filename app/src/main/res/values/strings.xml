@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">GoEasy</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password (optional)</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="rule">积分规则简介 积分是对会员在参与下单、线上活动、互动交流等行为给予的奖励. "\n" 1. 怎样获取积分？  "\n\t"（1）注册普通会员积1000分原始积分,"\n\t"（2）发话题贴积10分，设成优秀原创话题可另获20分的积分；"\n\t"（3）会员单笔消费所得积分 = 消费金额* 1 "\n" 2. 积分使用公式 会员单笔消费积分抵用 = 积分*0.2%（使用额度需不高于单笔订单总额的10%）"\n"3. 积分兑换礼品 会员账户内的积分可用于兑换相应礼品，进入【积分商城】即可直接兑换."\n"4. 积分使用规则 "\n\t"（1）积分使用过程中不找零、不兑现、不开发票，不可转移至其他账户。"\n\t"（2）使用积分进行兑换，兑换申请一经提交, 一律不能取消(除礼品缺货等特殊情况)。 "\n\t"（3）如因路之遥电子网缺货等原因导致的退货退款，则抵扣的积分将返还到会员账户，如因会员个人原因导致的退货退款，则不返还抵扣积分。 "\n\t"（4）兑换礼品涉及运费由用户自行承担。  \t（5）路之遥电子网保留最终解释权。</string>
+    <string name="text">一直以来，我们发现在果壳上有30000+的用户在学习MOOC，我们觉得如果能为这样一群可爱又执着的学习者提供一个中文环境的交流平台一定是件很有意义的事情，这其中或许也包括你。在新的“MOOC学院”中，你可以： 对学过的课程进行点评，为后来的学习者提供选课建议。 用笔记记录作业、资料和学习心得，与同学们一起分享·通过答疑，相互帮助探讨问题。 在讨论区发帖，讨论正在上的课程的难题，也可以和大家分享与MOOC有关的新闻八卦。 当然，也可以在课程列表中寻找自己感兴趣的新课程。借此，我们希望在每次听课结束，关掉MOOC之后，无论你身在何处，都能在这里找到一间教室和一群同学，用中文更加轻松、直接的探讨和分享学习内容，相互帮助，甚至成为朋友，就像又回到大学里一样。</string>
+    <string name="title_activity_temp">TempActivity</string>
+
+
+</resources>
